@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Project", id: "projects" },
@@ -92,7 +93,7 @@ export default function Home() {
             href="/"
             className="font-mono text-sm font-semibold tracking-wider text-white hover:text-teal-400 transition-colors uppercase"
           >
-            [USMAN LAWAL].
+            USMAN LAWAL
           </Link>
 
           {/* Desktop Navigation */}
@@ -104,11 +105,10 @@ export default function Home() {
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className={`transition-colors py-1 relative ${
-                    isActive
+                  className={`transition-colors py-1 relative ${isActive
                       ? "text-teal-400 font-semibold"
                       : "text-zinc-400 hover:text-zinc-200 font-medium"
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -198,11 +198,10 @@ export default function Home() {
                     key={link.id}
                     href={`#${link.id}`}
                     onClick={(e) => scrollToSection(e, link.id)}
-                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between ${
-                      isActive
+                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between ${isActive
                         ? "bg-teal-400/10 text-teal-400 font-semibold border-l-2 border-teal-400"
                         : "text-zinc-300 hover:bg-zinc-800/60 hover:text-white"
-                    }`}
+                      }`}
                   >
                     <span>{link.name}</span>
                     {isActive && (
@@ -222,18 +221,18 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-10">
             <div className="flex-1 space-y-6 w-full text-left">
               <div className="inline-block text-xs font-mono font-medium tracking-wider text-teal-400 uppercase">
-                Software Engineer · [CITY / REMOTE]
+                Computer Science Graduate &bull; IT Systems &amp; Operations Specialist &bull; Daura, Katsina State
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-                Building skills, one project at a time.{" "}
-                <span className="text-teal-400">I learn by building.</span>
+                Optimizing IT infrastructure &amp; operations.{" "}
+                <span className="text-teal-400">Delivering analytical rigor.</span>
               </h1>
 
               <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl">
-                I&apos;ve spent two years learning and practising [BACKEND / FULL-STACK]
-                development, building real projects, writing clean code and improving
-                every week. I&apos;m looking for a team where I can grow.
+                Proactive Computer Science graduate with hands-on experience in public sector
+                administration, central registry management, and network infrastructure support.
+                Committed to writing clean code, maintaining robust systems, and driving organizational objectives.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -244,6 +243,13 @@ export default function Home() {
                 >
                   See my project
                 </a>
+                <Link
+                  href="/resume"
+                  target="_blank"
+                  className="border border-teal-500/50 bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 font-medium px-5 py-2.5 rounded-lg text-sm transition-colors"
+                >
+                  View Full Résumé
+                </Link>
                 <a
                   href="#contact"
                   onClick={(e) => scrollToSection(e, "contact")}
@@ -254,30 +260,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Square Headshot Placeholder - Centered on small screens */}
+            {/* Square Headshot - Centered on small screens */}
             <div className="w-full flex justify-center md:w-auto md:justify-end">
-              <div className="w-48 h-48 sm:w-60 sm:h-60 rounded-2xl bg-[#111726] border border-zinc-800 flex flex-col items-center justify-center p-6 text-center shadow-inner group hover:border-zinc-700 transition-colors mx-auto md:mx-0">
-                <div className="w-12 h-12 rounded-full bg-zinc-800/80 flex items-center justify-center text-zinc-400 mb-3 group-hover:text-teal-400 transition-colors">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-xs font-mono font-medium text-zinc-300">
-                  [YOUR PHOTO]
-                </span>
-                <span className="text-[11px] text-zinc-500 mt-1">
-                  Upload a square headshot
-                </span>
+              <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border border-zinc-800 shadow-xl group hover:border-teal-500/50 transition-all duration-300 mx-auto md:mx-0">
+                <Image
+                  src="/profile.jpg"
+                  alt="Usman Lawal"
+                  fill
+                  priority
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 192px, 240px"
+                />
               </div>
             </div>
           </div>
@@ -285,16 +278,16 @@ export default function Home() {
           {/* Stats Bar */}
           <div className="grid grid-cols-3 gap-4 pt-16 border-t border-zinc-800/80 mt-16">
             <div>
-              <div className="text-3xl font-bold text-teal-400">2 yrs</div>
-              <div className="text-xs text-zinc-400 mt-1">learning and building</div>
+              <div className="text-3xl font-bold text-teal-400">2+ yrs</div>
+              <div className="text-xs text-zinc-400 mt-1">IT Systems &amp; Ops</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-teal-400 font-mono">[N]</div>
-              <div className="text-xs text-zinc-400 mt-1">projects built</div>
+              <div className="text-3xl font-bold text-teal-400 font-mono">B.Sc.</div>
+              <div className="text-xs text-zinc-400 mt-1">Computer Science</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-teal-400 font-mono">[N]</div>
-              <div className="text-xs text-zinc-400 mt-1">technologies learned</div>
+              <div className="text-3xl font-bold text-teal-400 font-mono">NYSC</div>
+              <div className="text-xs text-zinc-400 mt-1">Certified (2020)</div>
             </div>
           </div>
         </section>
@@ -362,7 +355,7 @@ export default function Home() {
               02 / BACKGROUND
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
-              Education &amp; learning
+              Education &amp; Professional Certifications
             </h2>
           </div>
 
@@ -372,23 +365,25 @@ export default function Home() {
                 EDUCATION
               </div>
               <h3 className="text-base font-bold text-white">
-                [DEGREE / DIPLOMA], [FIELD]
+                B.Sc. in Computer Science
               </h3>
-              <div className="text-sm text-zinc-400">[UNIVERSITY / INSTITUTION]</div>
+              <div className="text-sm text-zinc-400">Al-Qalam University, Katsina State, Nigeria</div>
               <div className="text-xs font-mono text-zinc-500 pt-1">
-                [START YEAR] &ndash; [END YEAR]
+                Graduated 2019
               </div>
             </div>
 
             <div className="bg-[#111726]/80 border border-zinc-800/90 rounded-2xl p-6 space-y-3 hover:border-zinc-700/80 transition-colors">
               <div className="text-xs font-mono text-teal-400 tracking-wider uppercase font-semibold">
-                CERTIFICATIONS &amp; COURSES
+                CERTIFICATIONS &amp; CREDENTIALS
               </div>
-              <h3 className="text-base font-bold text-white">[COURSE / CERTIFICATE]</h3>
+              <h3 className="text-base font-bold text-white">
+                Certificate in ICT &bull; NYSC Discharge
+              </h3>
               <div className="text-sm text-zinc-400">
-                [PROVIDER, e.g. bootcamp or online platform]
+                Beti ICT Ltd. &amp; National Youth Service Corps (NYSC)
               </div>
-              <div className="text-xs font-mono text-zinc-500 pt-1">[YEAR]</div>
+              <div className="text-xs font-mono text-zinc-500 pt-1">2018 &ndash; 2020</div>
             </div>
           </div>
         </section>
@@ -399,51 +394,51 @@ export default function Home() {
             <div className="text-xs font-mono font-semibold tracking-wider text-teal-400 uppercase">
               03 / SKILLS
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">Toolbox</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">Core Competencies &amp; Toolbox</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-[#111726]/80 border border-zinc-800/90 rounded-2xl p-6 space-y-4 hover:border-zinc-700/80 transition-colors">
-              <h3 className="text-base font-bold text-white">Languages</h3>
+              <h3 className="text-base font-bold text-white">IT &amp; Systems Admin</h3>
               <div className="flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Language]
+                  Network Troubleshooting
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Language]
+                  LAN Setup &amp; Routers
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Language]
+                  Hardware Diagnostics
                 </span>
               </div>
             </div>
 
             <div className="bg-[#111726]/80 border border-zinc-800/90 rounded-2xl p-6 space-y-4 hover:border-zinc-700/80 transition-colors">
-              <h3 className="text-base font-bold text-white">Frameworks</h3>
+              <h3 className="text-base font-bold text-white">Records &amp; Operations</h3>
               <div className="flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Framework]
+                  Open/Central Registry
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Framework]
+                  File Archiving
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Framework]
+                  Information Security
                 </span>
               </div>
             </div>
 
             <div className="bg-[#111726]/80 border border-zinc-800/90 rounded-2xl p-6 space-y-4 hover:border-zinc-700/80 transition-colors">
-              <h3 className="text-base font-bold text-white">Tools</h3>
+              <h3 className="text-base font-bold text-white">Productivity &amp; Tools</h3>
               <div className="flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
                   Git &amp; GitHub
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Database]
+                  Data Validation
                 </span>
                 <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                  [Tool]
+                  Executive Reports
                 </span>
               </div>
             </div>
@@ -534,29 +529,29 @@ export default function Home() {
             >
               GitHub
             </a>
+            {/* This a comment */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/usmanlawal07/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-teal-400 transition-colors"
             >
               LinkedIn
             </a>
-            <a
-              href="#"
+            <Link
+              href="/resume"
               target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-teal-400 transition-colors"
+              className="hover:text-teal-400 transition-colors font-medium text-teal-400/90"
             >
               R&eacute;sum&eacute; (PDF)
-            </a>
+            </Link>
           </div>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="border-t border-zinc-800/80 py-8 text-center text-xs text-zinc-500 font-mono">
-        &copy; {new Date().getFullYear()} [USMAN LAWAL]
+        &copy; {new Date().getFullYear()} USMAN LAWAL
       </footer>
     </div>
   );
