@@ -260,16 +260,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Square Headshot - Centered on small screens */}
+            {/* Oval Headshot - Centered on small screens */}
             <div className="w-full flex justify-center md:w-auto md:justify-end">
-              <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border border-zinc-800 shadow-xl group hover:border-teal-500/50 transition-all duration-300 mx-auto md:mx-0">
+              <div className="relative w-48 h-64 sm:w-56 sm:h-72 rounded-[50%] overflow-hidden border-2 border-zinc-800 shadow-2xl group hover:border-teal-500/60 transition-all duration-300 mx-auto md:mx-0">
                 <Image
                   src="/profile.jpg"
                   alt="Usman Lawal"
                   fill
                   priority
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 192px, 240px"
+                  sizes="(max-width: 640px) 192px, 224px"
                 />
               </div>
             </div>
