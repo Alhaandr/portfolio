@@ -305,25 +305,18 @@ export default function Home() {
 
           <div className="bg-[#111726]/80 border border-zinc-800/90 rounded-2xl p-6 sm:p-8 space-y-5 hover:border-zinc-700/80 transition-colors">
             <div className="text-xs font-mono text-zinc-400 tracking-wider">
-              [PROJECT NAME] · [YEAR]
+              PROJECT NAME · YEAR
             </div>
 
-            <h3 className="text-xl font-bold text-white">[Project name]</h3>
+            <h3 className="text-xl font-bold text-white">Project name</h3>
 
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              [One sentence on the problem it solves. One sentence on what you built and how.
-              One sentence on what you learned or what it can do.]
+              Everything you need to know is on github for now
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                [Stack]
-              </span>
-              <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                [Stack]
-              </span>
-              <span className="px-2.5 py-1 text-xs rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/60 font-mono">
-                [Stack]
+                Goto my github
               </span>
             </div>
 
